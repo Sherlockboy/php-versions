@@ -11,13 +11,10 @@ class BlogData
     /** @var DateTime|null */
     private $publishedAt;
 
-    /**
-     * @param DateTime|null $publishedAt
-     */
     public function __construct(
         string $title,
         bool $state,
-        $publishedAt = null
+        ?DateTime $publishedAt = null
     )
     {
         $this->title = $title;
@@ -35,10 +32,7 @@ class BlogData
         return $this->state;
     }
 
-    /**
-     * @return DateTime|null
-     */
-    public function getPublishedAt()
+    public function getPublishedAt(): ?DateTime
     {
         return $this->publishedAt;
     }
