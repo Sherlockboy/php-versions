@@ -12,14 +12,12 @@ class BlogData
     private $publishedAt;
 
     /**
-     * @param string $title
-     * @param bool $state
      * @param DateTime|null $publishedAt
      */
     public function __construct(
-        $title,
-        $state,
-        $publishedAt
+        string $title,
+        bool $state,
+        $publishedAt = null
     )
     {
         $this->title = $title;
@@ -27,18 +25,12 @@ class BlogData
         $this->publishedAt = $publishedAt;
     }
 
-    /**
-     * @return string
-     */
-    public function getTitle()
+    public function getTitle(): string
     {
         return $this->title;
     }
 
-    /**
-     * @return bool
-     */
-    public function getState()
+    public function getState(): bool
     {
         return $this->state;
     }
