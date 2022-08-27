@@ -2,21 +2,12 @@
 
 class BlogData
 {
-    private string $title;
-
-    private bool $state;
-
-    private ?DateTime $publishedAt;
-
     public function __construct(
-        string $title,
-        bool $state,
-        ?DateTime $publishedAt = null
+        private string $title,
+        private bool $state,
+        private ?DateTime $publishedAt = null
     )
     {
-        $this->title = $title;
-        $this->state = $state;
-        $this->publishedAt = $publishedAt;
     }
 
     public function getTitle(): string
