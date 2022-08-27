@@ -2,14 +2,11 @@
 
 class BlogData
 {
-    /** @var string */
-    private $title;
+    private string $title;
 
-    /** @var bool */
-    private $state;
+    private bool $state;
 
-    /** @var DateTime|null */
-    private $publishedAt;
+    private ?DateTime $publishedAt;
 
     public function __construct(
         string $title,
